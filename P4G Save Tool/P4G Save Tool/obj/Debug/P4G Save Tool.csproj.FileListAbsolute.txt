@@ -1,0 +1,21 @@
+F:\Tools\P4G Save Tool\P4G Save Tool\bin\Debug\P4G Save Tool.exe.config
+F:\Tools\P4G Save Tool\P4G Save Tool\bin\Debug\P4G Save Tool.exe
+F:\Tools\P4G Save Tool\P4G Save Tool\bin\Debug\P4G Save Tool.pdb
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.csprojResolveAssemblyReference.cache
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\MainWindow.g.cs
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\App.g.cs
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool_MarkupCompile.cache
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool_MarkupCompile.lref
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\MainWindow.baml
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.g.resources
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G_Save_Tool.Properties.Resources.resources
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.csproj.GenerateResource.Cache
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.exe
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.pdb
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\About.g.cs
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\About.baml
+F:\Tools\P4G Save Tool\P4G Save Tool\bin\Debug\P4G Save Tool.exe.manifest
+F:\Tools\P4G Save Tool\P4G Save Tool\bin\Debug\P4G Save Tool.application
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.TrustInfo.xml
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.exe.manifest
+F:\Tools\P4G Save Tool\P4G Save Tool\obj\Debug\P4G Save Tool.application
