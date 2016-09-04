@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using MahApps.Metro.Controls;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -366,7 +367,7 @@ namespace P4G_Save_Tool
             return new SocialLink(name, id, tarot, level, progress);
         }
     };
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         string filename;
         byte[] currentFileCopy;

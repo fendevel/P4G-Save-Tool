@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace P4G_Save_Tool
     /// <summary>
     /// Interaction logic for About.xaml
     /// </summary>
-    public partial class About : Window
+    public partial class About : MetroWindow
     {
         public About()
         {
