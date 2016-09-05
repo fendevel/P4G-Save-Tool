@@ -179,14 +179,4 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
-    <ItemGroup>
-      <InputAssemblies Include="$(OutputPath)\MahApps.Metro.dll" />
-      <InputAssemblies Include="$(OutputPath)\MaterialDesignColors.dll" />
-      <InputAssemblies Include="$(OutputPath)\MaterialDesignThemes.MahApps.dll" />
-      <InputAssemblies Include="$(OutputPath)\MaterialDesignThemes.Wpf.dll" />
-      <InputAssemblies Include="$(OutputPath)\System.Windows.Interactivity.dll" />
-    </ItemGroup>
-    <ILRepack Parallel="true" Internalize="true" InputAssemblies="@(InputAssemblies)" TargetKind="Exe" OutputFile="$(OutputPath)\$(AssemblyName).exe" />
-  </Target>
 </Project>

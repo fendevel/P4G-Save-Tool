@@ -484,7 +484,7 @@
             <Label x:Name="label4" Content="Label" Height="100" Width="100"/>
             <Label x:Name="label5" Content="Label" Height="100" Width="100"/>
         </TabControl>
-        <TextBox x:Name="yenBox" TextAlignment="Right" TextWrapping="Wrap" Margin="626.5,25.586,0,0" PreviewTextInput="personaID_PreviewTextInput" Height="30.123" VerticalAlignment="Top" HorizontalAlignment="Left" Width="105" TextChanged="yenBox_TextChanged" Background="White" Foreground="Black" VerticalContentAlignment="Top" CaretBrush="#FFF25907" Text="0"/>
+        <TextBox x:Name="yenBox" TextAlignment="Right" TextWrapping="Wrap" Margin="626,26,0,0" PreviewTextInput="personaID_PreviewTextInput" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="102" TextChanged="yenBox_TextChanged" Background="White" Foreground="Black" VerticalContentAlignment="Top" CaretBrush="#FFF25907" Text="0"/>
         <Label HorizontalAlignment="Left"  Margin="582.77,25.586,0,0" Content="Yen :" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="30.123"/>
     </Grid>
 </Controls:MetroWindow>
