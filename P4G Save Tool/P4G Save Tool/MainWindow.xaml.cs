@@ -344,26 +344,29 @@ namespace P4G_Save_Tool
         private byte tarot;
         private byte level;
         private byte progress;
+        private byte flag;
         public string Name { get { return name; } }
         public byte ID { get { return id; } }
         public byte Progress { get { return progress; } set { progress = value; } }
         public string Tarot { get { return Database.Arcana[tarot]; } }
         public byte Level { get { return level; } set { level = value; } }
-        public SocialLink(string name, byte id, byte tarot, byte level, byte progress = 0)
+        public byte Flag { get { return flag; } set { flag = value; } }
+        public SocialLink(string name, byte id, byte tarot, byte level = 1, byte progress = 0, byte flag = 0)
         {
             this.name = name;
             this.id = id;
             this.tarot = tarot;
             this.level = level;
             this.progress = progress;
+            this.flag = flag;
         }
         public SocialLink Copy()
         {
-            return new SocialLink(name, id, tarot, level);
+            return new SocialLink(name, id, tarot, level,progress, flag);
         }
-        public SocialLink Copy(byte level, byte progress)
+        public SocialLink Copy(byte level, byte progress, byte flag)
         {
-            return new SocialLink(name, id, tarot, level, progress);
+            return new SocialLink(name, id, tarot, level, progress, flag);
         }
     };
     public partial class MainWindow : Window
@@ -438,7 +441,7 @@ namespace P4G_Save_Tool
             knowledgeLevels = new string[] { "Aware", "Informed", "Expert", "Professor", "Sage" };
             courageLevels = new string[] { "Average", "Reliable", "Brave", "Daring", "Heroic" };
             expressionLevels = new string[] { "Rough", "Eloquent", "Persuasive", "Touching", "Enthralling" };
-            diligenceLevels = new string[] { "Callow", "Persistent", "Strong", "Persuasive", "Rock Solid" };
+            diligenceLevels = new string[] { "Callow", "Persistent", "Strong", "Thorough", "Rock Solid" };
 
             ItemByte[] members = new ItemByte[7]
             {
@@ -507,6 +510,7 @@ namespace P4G_Save_Tool
                 "Shelf",
                 "Costumes",
                 "Bugs",
+                "Fish",
                 "Other"
             };
 
@@ -514,33 +518,39 @@ namespace P4G_Save_Tool
             {
                 new SocialLink("Blank", 0, 0, 0),
                 new SocialLink("Investigation Team", 1, 1, 1),
-                new SocialLink("Yosuke", 7, 2, 1),
-                new SocialLink("Chie", 11, 8, 1),
-                new SocialLink("Yukiko", 5, 3, 1),
-                new SocialLink("Kanji", 10, 5, 1),
-                new SocialLink("Teddie", 24, 18, 1),
+                new SocialLink("Nanako", 2, 9, 1),
                 new SocialLink("Rise", 3, 7, 1),
+                new SocialLink("Rise (GF)", 4, 7, 1),
+                new SocialLink("Yukiko", 5, 3, 1),
+                new SocialLink("Yukiko (GF)", 6, 3, 1),
+                new SocialLink("Yosuke", 7, 2, 1),
+                new SocialLink("Dojima", 8, 6, 1),
+                new SocialLink("Sayoko", 9, 16, 1),
+                new SocialLink("Kanji", 10, 5, 1),
+                new SocialLink("Chie", 11, 8, 1),
+                new SocialLink("Chie (GF)", 12, 3, 1),
+                new SocialLink("Fox", 13, 10, 1),
                 new SocialLink("Naoto", 14, 11, 1),
+                new SocialLink("Naoto (GF)", 15, 11, 1),
                 new SocialLink("Fellow Athletes (Kou)", 16, 12, 1),
                 new SocialLink("Fellow Athletes (Daisuke)", 17, 12, 1),
-                new SocialLink("Ayane", 25, 20, 1),
-                new SocialLink("Yumi", 27, 20, 1),
                 new SocialLink("Naoki", 18, 13, 1),
+                new SocialLink("Hisano", 19, 14, 1),
+                new SocialLink("Margaret", 20, 4, 1),
                 new SocialLink("Ai", 21, 19, 1),
-                new SocialLink("Ai2", 22, 19, 1),
-                new SocialLink("Nanako", 2, 9, 1),
-                new SocialLink("Dojima", 8, 6, 1),
+                new SocialLink("Ai (GF)", 22, 19, 1),
+                new SocialLink("Shu", 23, 17, 1),
+                new SocialLink("Teddie", 24, 18, 1),
+                new SocialLink("Yumi", 25, 20, 1),
+                new SocialLink("Yumi (GF)", 26, 20, 1),
+                new SocialLink("Ayane", 27, 20, 1),
+                new SocialLink("Ayane (GF)", 28, 20, 1),
+                new SocialLink("Eri", 29, 15, 1),
+                new SocialLink("The Seekers of Truth", 30, 21, 1),
                 new SocialLink("Adachi", 31, 25, 1),
                 new SocialLink("Adachi (Hunger)", 32, 26, 1),
-                new SocialLink("Fox", 13, 10, 1),
-                new SocialLink("Hisano", 19, 14, 1),
-                new SocialLink("Eri", 29, 15, 1),
-                new SocialLink("Sayoko", 9, 16, 1),
-                new SocialLink("Shu", 23, 17, 1),
-                new SocialLink("Margaret", 20, 4, 1),
                 new SocialLink("Marie", 33, 22, 1),
-                new SocialLink("Marie2", 34, 22, 1),
-                new SocialLink("The Seekers of Truth", 30, 21, 1)
+                new SocialLink("Marie (GF)", 34, 22, 1),
             };
 
             inventory = new byte[2559];
@@ -586,6 +596,8 @@ namespace P4G_Save_Tool
 
             List<Item> bugs = new List<Item>(Utils.GetFromDatabase(Database.allItems, 909, 7));
 
+            List<Item> fish = new List<Item>(Utils.GetFromDatabase(Database.allItems, 1004, 3));
+        
             armor = new List<Item>(Utils.GetFromDatabase(Database.allItems, 257, 8));
             accessories = new List<Item>(Utils.GetFromDatabase(Database.allItems, 513, 96));
             consumables = new List<Item>(Utils.GetFromDatabase(Database.allItems, 769, 51));
@@ -653,6 +665,8 @@ namespace P4G_Save_Tool
             naWeps.AddRange(Utils.GetFromDatabase(Database.allItems, 2407, 8));
             teWeps.AddRange(Utils.GetFromDatabase(Database.allItems, 2425, 8));
 
+            fish.AddRange(Utils.GetFromDatabase(Database.allItems, 1008, 7));
+
 
             mcWeps.Add(new Item(Database.allItems[2434], 2434));
             yoWeps.Add(new Item(Database.allItems[2435], 2435));
@@ -679,7 +693,7 @@ namespace P4G_Save_Tool
             naWeps.Insert(0, wepBlank);
             teWeps.Insert(0, wepBlank);
 
-            consumables.Insert(00, consumableBlank);
+            consumables.Insert(0, consumableBlank);
             armor.Insert(0, armorBlank);
             accessories.Insert(0, accessoryBlank);
             cards.Insert(0, cardBlank);
@@ -693,13 +707,14 @@ namespace P4G_Save_Tool
 
             other.Insert(0, otherBlank);
             bugs.Insert(0, otherBlank);
+            fish.Insert(0, otherBlank);
 
             Database.weapons.Insert(0, wepBlank);
 
 
 
             weps = new List<Item>[] { mcWeps, yoWeps, chWeps, yuWeps, null, kaWeps, naWeps, teWeps };
-            items = new List<Item>[] { Database.weapons, armor, accessories, consumables, materials, cards, books, veggies, minerals, socialLink, shelf, costumes, bugs, other };
+            items = new List<Item>[] { Database.weapons, armor, accessories, consumables, materials, cards, books, veggies, minerals, socialLink, shelf, costumes, bugs, fish, other };
 
             itemSectBox.ItemsSource = itmSections;
             itemSectBox.SelectedIndex = 0;
@@ -1209,7 +1224,9 @@ namespace P4G_Save_Tool
                     w.Write(s.Level);
                     w.BaseStream.Position++;
                     w.Write(s.Progress);
-                    if (i < lcount - 1) w.BaseStream.Position += 11;
+                    w.BaseStream.Position+=7;
+                    w.Write(s.Flag);
+                    if (i < lcount - 1) w.BaseStream.Position += 3;
                 }
                 w.BaseStream.Position = 9688;
                 byte lcount2 = (byte)(compendiumBox.Items.Count);
@@ -1562,20 +1579,30 @@ namespace P4G_Save_Tool
                 for (byte i = 0; i < 23; i++)
                 {
                     byte id = r.ReadByte();
-                    r.ReadByte();
+                    r.BaseStream.Position++;
                     byte level = r.ReadByte();
-                    r.ReadByte();
+                    r.BaseStream.Position++;
                     byte progress = r.ReadByte();
+                    r.BaseStream.Position+=7;
+                    byte flag = r.ReadByte();
                     if (id != 0)
                     {
+                        bool found = false;
                         for (byte q = 0; q < socialLinkIDs.Length; q++)
                         {
                             if (socialLinkIDs[q].ID == id)
-                                sLinkBox.Items.Add(socialLinkIDs[q].Copy(level, progress));
+                            {
+                                sLinkBox.Items.Add(socialLinkIDs[q].Copy(level, progress, flag));
+                                found = true;
+                            }
+                        }
+                        if(!found)
+                        {
+                            sLinkBox.Items.Add(new SocialLink("Unknown (" + id.ToString() + ')', id, 0, level, progress, flag));
                         }
                     }
 
-                    if (i < 22) r.BaseStream.Position += 11;
+                    if (i < 22) r.BaseStream.Position += 3;
                 }
                 compendiumBox.Items.Clear();
                 //r.BaseStream.Position = 109620;
@@ -1621,12 +1648,9 @@ namespace P4G_Save_Tool
                 stackBox.Items.Clear();
 
                 for (int i = 0; i < inventory.Length; i++)
-                {
                     if (inventory[i] != 0)
-                    {
                         AddInventoryItem(new Item(Database.allItems[i], (ushort)i), inventory[i]);
-                    }
-                }
+
                 Array.Clear(inventory, 0, inventory.Length);
 
                 member.SelectedIndex = 1;

@@ -6,9 +6,9 @@
         xmlns:flow="Windows.Navigation"
         xmlns:local="clr-namespace:P4G_Save_Tool"
         mc:Ignorable="d"
-        Title="About Version 1.5.1" Height="127" Width="534" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+        Title="About Version 1.6.0" Height="127" Width="534" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid Height="96" VerticalAlignment="Top" HorizontalAlignment="Left" Width="526">
-        <TextBlock HorizontalAlignment="Left" Height="55" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="506" TextAlignment="Center">
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="506" TextAlignment="Center">
             Written by Fennec-kun with aid from TGE, Shrinefox, and Pan from
             <Hyperlink NavigateUri="http://s15.zetaboards.com/Amicitia/index/" RequestNavigate="Hyperlink_RequestNavigate">
                 Amicitia
@@ -18,6 +18,13 @@
             <Hyperlink NavigateUri="https://discord.gg/M3uGjsk" RequestNavigate="Hyperlink_RequestNavigate">
                 https://discord.gg/M3uGjsk
             </Hyperlink>
+            <LineBreak/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" FontSize="10" Height="20" Margin="10,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="506" TextAlignment="Center">
+            Special thanks to you guys who report issues on my 
+            <Hyperlink NavigateUri="https://github.com/Fennec-kun/P4G-Save-Tool" RequestNavigate="Hyperlink_RequestNavigate">
+                GitHub            
+            </Hyperlink>!
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Width="506" TextAlignment="Center" Height="25" VerticalAlignment="Bottom">
             This was made possible by
