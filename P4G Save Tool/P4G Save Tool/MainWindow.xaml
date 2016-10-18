@@ -40,63 +40,63 @@
                         <ComboBoxItem Content="Slot 11"/>
                         <ComboBoxItem Content="Slot 12"/>
                     </ComboBox>
-                    <ComboBox x:Name="personaIDs" HorizontalAlignment="Left" Margin="97,176,0,0" VerticalAlignment="Top" Width="160" SelectionChanged="personaIDs_SelectionChanged">
+                    <ComboBox x:Name="personaIDs" HorizontalAlignment="Left" Margin="97,176,0,0" VerticalAlignment="Top" Width="160" SelectionChanged="personaIDs_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox1" HorizontalAlignment="Left" Margin="351,236,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox1" HorizontalAlignment="Left" Margin="351,236,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox2" HorizontalAlignment="Left" Margin="351,263,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox2" HorizontalAlignment="Left" Margin="351,263,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox3" HorizontalAlignment="Left" Margin="351,290,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox3" HorizontalAlignment="Left" Margin="351,290,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox4" HorizontalAlignment="Left" Margin="351,317,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox4" HorizontalAlignment="Left" Margin="351,317,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox5" HorizontalAlignment="Left" Margin="494,236,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox5" HorizontalAlignment="Left" Margin="494,236,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox6" HorizontalAlignment="Left" Margin="494,263,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox6" HorizontalAlignment="Left" Margin="494,263,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox7" HorizontalAlignment="Left" Margin="494,290,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox7" HorizontalAlignment="Left" Margin="494,290,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <ComboBox x:Name="skillBox8" HorizontalAlignment="Left" Margin="494,317,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged">
+                    <ComboBox x:Name="skillBox8" HorizontalAlignment="Left" Margin="494,317,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="skillBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
@@ -150,21 +150,21 @@
                     <TextBox x:Name="xpBox" HorizontalAlignment="Left" Height="23" Margin="351,178,0,0" TextWrapping="Wrap" Text="0" TextAlignment="Right" VerticalAlignment="Top" Width="138" PreviewTextInput="personaID_PreviewTextInput" TextChanged="xpBox_TextChanged"/>
                     <GroupBox Header="Party Configuration" HorizontalAlignment="Left" Margin="420,36,0,0" VerticalAlignment="Top" Height="107" Width="195">
                         <StackPanel Orientation="Vertical" Name="partymembers">
-                            <ComboBox x:Name="member1" HorizontalAlignment="Left" Margin="10,5,-28,0" VerticalAlignment="Top" Width="161">
+                            <ComboBox x:Name="member1" HorizontalAlignment="Left" Margin="10,5,-28,0" VerticalAlignment="Top" Width="161" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate DataType="ItemByte">
                                         <TextBlock Text="{ Binding Mode=OneWay, Path=Name }"/>
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
-                            <ComboBox x:Name="member2" HorizontalAlignment="Left" Margin="10,5,-28,0" VerticalAlignment="Top" Width="161">
+                            <ComboBox x:Name="member2" HorizontalAlignment="Left" Margin="10,5,-28,0" VerticalAlignment="Top" Width="161" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate DataType="ItemByte">
                                         <TextBlock Text="{ Binding Mode=OneWay, Path=Name }"/>
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
-                            <ComboBox x:Name="member3" HorizontalAlignment="Left" Margin="10,5,-28,0" VerticalAlignment="Top" Width="161">
+                            <ComboBox x:Name="member3" HorizontalAlignment="Left" Margin="10,5,-28,0" VerticalAlignment="Top" Width="161" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate DataType="ItemByte">
                                         <TextBlock Text="{ Binding Mode=OneWay, Path=Name }"/>
@@ -199,7 +199,7 @@
             </TabItem>
             <TabItem Header="Inventory">
                 <Grid>
-                    <ComboBox x:Name="itemBox" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="152" SelectionChanged="itemBox_SelectionChanged">
+                    <ComboBox x:Name="itemBox" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="152" SelectionChanged="itemBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
@@ -209,13 +209,13 @@
                     <ComboBox x:Name="itemSectBox" HorizontalAlignment="Left" Margin="167,326,0,0" VerticalAlignment="Top" Width="95" SelectionChanged="itemSectBox_SelectionChanged"/>
                     <Grid>
 
-                        <ListBox x:Name="invBox" HorizontalAlignment="Left" Height="311" Margin="10,10,0,0" VerticalAlignment="Top" Width="187" SelectionChanged="invBox_SelectionChanged">
+                        <ListBox x:Name="invBox" HorizontalAlignment="Left" Height="311" Margin="10,10,0,0" VerticalAlignment="Top" Width="187" SelectionChanged="invBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ListBox.ContextMenu>
                                 <ContextMenu Opened="ContextMenu_Opened">
                                     <MenuItem Name="deleteMenuItem" Header="Delete" Click="deleteMenuItem_Click"/>
                                 </ContextMenu>
                             </ListBox.ContextMenu>
-                            <ListBox.ItemTemplate>
+                            <ListBox.ItemTemplate >
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
@@ -229,7 +229,7 @@
                             </-->
                         </ListBox>
                         <TextBlock Text="Weapons" TextAlignment="Right" HorizontalAlignment="Left" Width="62" Height="20" VerticalAlignment="Top" Margin="273,49,0,0"/>
-                        <ComboBox x:Name="wepBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="wepBox_SelectionChanged" Margin="340,47,0,0">
+                        <ComboBox x:Name="wepBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="wepBox_SelectionChanged" Margin="340,47,0,0" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Name}"/>
@@ -237,7 +237,7 @@
                             </ComboBox.ItemTemplate>
                         </ComboBox>
                         <TextBlock Text="Armor" TextAlignment="Right" HorizontalAlignment="Left" Width="62" Height="20" VerticalAlignment="Top" Margin="273,74,0,0"/>
-                        <ComboBox x:Name="armBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="armBox_SelectionChanged" Margin="340,74,0,0">
+                        <ComboBox x:Name="armBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="armBox_SelectionChanged" Margin="340,74,0,0" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Name}"/>
@@ -245,14 +245,14 @@
                             </ComboBox.ItemTemplate>
                         </ComboBox>
                         <TextBlock Text="Accessory" TextAlignment="Right" HorizontalAlignment="Left" Width="62" Height="20" VerticalAlignment="Top" Margin="273,101,0,0"/>
-                        <ComboBox x:Name="accBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="accBox_SelectionChanged"  Margin="340,101,0,0">
+                        <ComboBox x:Name="accBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="accBox_SelectionChanged"  Margin="340,101,0,0" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="charBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="charBox_SelectionChanged" Margin="340,20,0,0">
+                        <ComboBox x:Name="charBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="charBox_SelectionChanged" Margin="340,20,0,0" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Name}"/>
@@ -261,7 +261,7 @@
                         </ComboBox>
                         <TextBlock Text="Character" TextAlignment="Right" HorizontalAlignment="Left" Width="62" Height="20" VerticalAlignment="Top" Margin="273,20,0,0"/>
                         <TextBlock Text="Costume" TextAlignment="Right" HorizontalAlignment="Left" Width="62" Height="20" VerticalAlignment="Top" Margin="273,128,0,0"/>
-                        <ComboBox x:Name="cosBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="cosBox_SelectionChanged" Margin="340,128,0,0">
+                        <ComboBox x:Name="cosBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" SelectionChanged="cosBox_SelectionChanged" Margin="340,128,0,0" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Name}"/>
@@ -303,7 +303,7 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <ComboBox x:Name="sLinkComboBox" HorizontalAlignment="Left" Margin="27,326,0,0" VerticalAlignment="Top" Width="195" SelectionChanged="sLinkComboBox_SelectionChanged">
+                    <ComboBox x:Name="sLinkComboBox" HorizontalAlignment="Left" Margin="27,326,0,0" VerticalAlignment="Top" Width="195" SelectionChanged="sLinkComboBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="SocialLink">
                                 <TextBlock Text="{Binding Mode=OneWay, Path=Name}"/>
@@ -367,56 +367,56 @@
                     </ListBox>
                     <StackPanel Orientation="Vertical" Margin="505,10,10,133">
 
-                        <ComboBox x:Name="compSkillBox1" HorizontalAlignment="Left" Margin="0,0" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox1" HorizontalAlignment="Left" Margin="0,0" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="compSkillBox2" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox2" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="compSkillBox3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="compSkillBox4" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox4" HorizontalAlignment="Left" Margin="0,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="compSkillBox5" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox5" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="compSkillBox6" HorizontalAlignment="Left"  Margin="0,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox6" HorizontalAlignment="Left"  Margin="0,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="compSkillBox7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <ComboBox x:Name="compSkillBox8" HorizontalAlignment="Left" Margin="00,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False">
+                        <ComboBox x:Name="compSkillBox8" HorizontalAlignment="Left" Margin="00,5" VerticalAlignment="Top" Width="138" SelectionChanged="compSkillBox_SelectionChanged" IsEnabled="False" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate DataType="Item">
                                     <TextBlock Text="{Binding Path=Name}"/>
@@ -425,7 +425,7 @@
                         </ComboBox>
                     </StackPanel>
 
-                    <ComboBox x:Name="compendiumComboBox" HorizontalAlignment="Left" Margin="505,299,0,0" VerticalAlignment="Top" Width="141" SelectionChanged="compendiumComboBox_SelectionChanged">
+                    <ComboBox x:Name="compendiumComboBox" HorizontalAlignment="Left" Margin="505,299,0,0" VerticalAlignment="Top" Width="141" SelectionChanged="compendiumComboBox_SelectionChanged" IsTextSearchEnabled="True" TextSearch.TextPath="Name">
                         <ComboBox.ItemTemplate>
                             <DataTemplate DataType="Item">
                                 <TextBlock Text="{Binding Path=Name}"/>
