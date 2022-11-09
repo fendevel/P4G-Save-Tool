@@ -1195,7 +1195,7 @@ namespace P4G_Save_Tool
 
                 w.BaseStream.Position = 3290;
                 w.Write(mcLevel);
-                w.BaseStream.Position = 3292;
+                w.BaseStream.Position = 3348;
                 w.Write(mcTotalXp);
 
                 w.BaseStream.Position = 3336;
@@ -1563,7 +1563,7 @@ namespace P4G_Save_Tool
 
                 r.BaseStream.Position = 3290;
                 mcLevel = r.ReadByte();
-                r.BaseStream.Position = 3292;
+                r.BaseStream.Position = 3348;
                 mcTotalXp = r.ReadUInt32();
 
                 r.BaseStream.Position = 6484;
